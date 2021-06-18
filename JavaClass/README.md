@@ -68,4 +68,85 @@ singleton 패턴이 정확히 무엇인가? 용도는?
 
  한번의 객체 생성으로 재 사용이 가능하기 때문에 메모리 낭비를 방지할 수 있다. 또한 **싱글톤**으로 생성된 객체는 무조건 한번 생성으로 전역성을 띄기에 다른 객체와 공유가 용이하다
 
-Java Day05 정리
+---
+
+배열과 ArrayList
+
+배열은 fixed length 이고 연속된 자료이다. 하나 없어지면 앞으로 다 땡겨준다.
+
+**기본 array**
+Int[] arr = new int[10];
+자료형[] 배열이름 = new 자료형[개수]
+char
+double
+
+초기화 값은 int 의 경우 0, double 의 경우 0.0
+
+**객체의 array**
+
+Book[] library = new Book[]
+공간만 만들어 준다.
+각각의 공간에 인스턴스를 생성해야된다.
+
+**배열 복사하기**
+
+System.arraycopy(복사할 배열, 복사할 첫 위치, 대상 배열, 붙여넣을 첫 위치, 복사할 개수)
+객체의 경우, 하나를 바꾸면 둘다 변경이 일어난다
+주소를 복사하는 것이기 때문이다.
+
+위와 같이 하기 싫은 경우는 어떻게 해야될까? 인스턴스를 다시 생성해야된다.
+
+```java
+    Book[] bookArray1 = new Book[3];
+		Book[] bookArray2 = new Book[3];
+		
+		bookArray1[0] = new Book("태백산맥1", "조정래");
+		bookArray1[1] = new Book("태백산맥2", "조정래");
+		bookArray1[2] = new Book("태백산맥3", "조정래");
+		
+		bookArray2[0] = new Book();
+		bookArray2[1] = new Book();
+		bookArray2[2] = new Book();
+		
+//		System.arraycopy(bookArray1, 0, bookArray2, 0, 3);
+//    이거는 주소를 복사한다.
+		
+		for(int i = 0; i<bookArray1.length; i++) {
+			bookArray2[i].setBookName(bookArray1[i].getBookName());
+			bookArray2[i].setAuthor(bookArray1[i].getAuthor());
+		}
+		
+		// 둘 다 바뀐다.
+		// 이유는 복사하는게 주소가 복사되는 것이기 때문에, 힙메모리가 바뀌면 같이 바뀐다.
+    // 인스턴스를 새로 만들고 할 경우, 따로따로가 된다.
+		bookArray1[0].setBookName("나목");
+		bookArray1[0].setAuthor("박완서");
+		
+		for(int i = 0; i<bookArray1.length; i++) {
+			bookArray1[i].showInfo();
+		}
+		
+		for(int i = 0; i<bookArray2.length; i++) {
+			bookArray2[i].showInfo();
+		}
+```
+
+
+
+**향상된 for 문**
+
+```java
+// 향상된 for 
+	    String[] strArr = {"Java", "Android", "C"};
+	   
+	    // 처음부터 끝까지 다 돌 것 이라면!
+	    for(String s : strArr) {
+	    	System.out.println(s);
+	    }
+	    
+	    int[] numbers = {1, 2, 3, 4, 5};
+	    for(int i : numbers) {
+	    	System.out.println(i);
+	    }
+```
+
