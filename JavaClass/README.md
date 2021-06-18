@@ -150,3 +150,33 @@ System.arraycopy(복사할 배열, 복사할 첫 위치, 대상 배열, 붙여�
 	    }
 ```
 
+
+
+**다차원 배열** : 2차원 이상의 배열
+
+**ArrayList 클래스** : 기존 배열은 길이가 정해져있기 때문에 늘어나면 복사하는 코드를 직접구현해야한다.
+							 이러한 것들을 쉽게 해주는 것을 제공해준다.
+
+주요 메서드: add, size, get, remove, isEmpty
+arrayList 에서는 index 를 제공하지 않는다. list[0] 불가능!
+ArrayList<어떤 객체(타입)> 쓰지 않으면 object 로 저장된다. : 요즘에는 쓰이지 않는다.
+
+Chapter7 Student, Subject, StudentTest ( 보기 )
+
+ **디버깅** : 벌레 클릭
+
+---
+
+**상속과 다형성** : 상속을 통해 다형성을 구현할 수 있다.
+
+자바는 single inheritance 만을 지원한다.
+
+class Mamma{}
+class Human extends Mamma{} // 상속 받았다.
+
+상속은 일반적인 것과 구체적인 관계에서만 사용: point 랑 circle 는 사용 x
+
+private, protected 차이?? : protected 는 외부는 private 상속에서는 public
+protected 는 같은 패키지에서도 보인다.
+
+class 를 짰는데 메서드안에 if else 가 너무 많으면 잘못 작성한 것, 상속을 사용해야된다.
