@@ -180,3 +180,5 @@ private, protected 차이?? : protected 는 외부는 private 상속에서는 pu
 protected 는 같은 패키지에서도 보인다.
 
 class 를 짰는데 메서드안에 if else 가 너무 많으면 잘못 작성한 것, 상속을 사용해야된다.
+
+VIP 와 SILVER 회원의 분리
