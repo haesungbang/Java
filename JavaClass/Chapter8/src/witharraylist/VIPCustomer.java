@@ -1,10 +1,16 @@
-package inheritance;
+package witharraylist;
 
 public class VIPCustomer extends Customer {
 	
 	private int agentID;
 	private double saleRatio;
 	
+	public VIPCustomer() {
+		customerGrade = "VIP";
+		bonusRatio = 0.05;
+		saleRatio = 0.1;
+		
+	}
 	public VIPCustomer(int customerID, String customerName, int agentID)
 	{
 	    // super(); 기본적으로 상위 클래스를 부른다.
@@ -27,4 +33,11 @@ public class VIPCustomer extends Customer {
 	public int getAgentID() {
 		return agentID;
 	}
+	
+	@Override
+	public String showCustomerInfo() {
+		return super.showCustomerInfo() + "담당 상담원 ID 는 " + agentID;
+	}
+	
+	
 }

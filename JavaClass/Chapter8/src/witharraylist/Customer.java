@@ -1,4 +1,4 @@
-package inheritance;
+package witharraylist;
 
 public class Customer {
 
@@ -8,12 +8,12 @@ public class Customer {
 	int bonusPoint;
 	protected double bonusRatio;
 //	
-//	public Customer()
-//	{
-//		customerGrade = "SILVER";
-//		bonusRatio = 0.01;
-////		System.out.println("Customer() 을 호출 ");
-//	}
+	public Customer()
+	{
+		customerGrade = "SILVER";
+		bonusRatio = 0.01;
+//		System.out.println("Customer() 을 호출 ");
+	}
 	
 	public Customer(int customerID, String customerName) {
 		

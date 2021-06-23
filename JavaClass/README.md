@@ -175,6 +175,7 @@ class Mamma{}
 class Human extends Mamma{} // 상속 받았다.
 
 상속은 일반적인 것과 구체적인 관계에서만 사용: point 랑 circle 는 사용 x
+단순히 코드 재사용 목적으로 사용하는 것이 아니라, 관계에 중점을 두는 것 같다.
 
 private, protected 차이?? : protected 는 외부는 private 상속에서는 public
 protected 는 같은 패키지에서도 보인다.
@@ -183,10 +184,32 @@ class 를 짰는데 메서드안에 if else 가 너무 많으면 잘못 작성�
 
 VIP 와 SILVER 회원의 분리
 
-<<<<<<< HEAD
-상속을 활용한 클래스 구현.
+![스크린샷 2021-06-23 오후 8.00.01](/Users/banghaeseong/Library/Application Support/typora-user-images/스크린샷 2021-06-23 오후 8.00.01.png)
 
-Java JDK 거의 다왔다...
+상위 클래스의 인스턴스가 먼저 생성되고, 그다음 하위 클래스 인스턴스 생성
+인스턴스는 힙 메모리에 저장된다.
 
-=======
-상속을 활용한 클래스 구현
+**업캐스팅 ( 묵시적 형변환 )**
+
+VIPCustomer customerKim = new VIPCustomer(10101, "Kim");
+Customer customerKim = new VIPCustomer(10101, "Kim");	
+
+둘 다 가능하다. VIPCustomer 가 Customer 을 내포하고 있기 때문에.
+인스턴스 생성은 VIPCustomer 로 되지만 type 는 Customer 따라서, agentID 같은 것이 보이지 않는다.
+
+**다운 캐스팅**
+오버라이딩하는 것이 좋지만 안 될 경우도 있을 때 사용
+instanceof` 를 사용한다.
+
+**메서드 오버라이딩**
+
+상위 클래스의 메서드를 덮어씌운다.
+묵시적 형변환의 경우 어떤 메서드가 불릴 것인가? VIPCustomer 가 불린다.
+
+**가상메서드**
+프로그램에서 어떤 객체나 변수나 메서드의 참조는 그 타입에 따라 이루어진다. 가상 메서드의 경우는 타입과 상관없이 실제 생성된 인스턴스의 메서드가 호출된다.
+재정의가 되어있다면 타입이 아니라 인스턴스가 불린다.
+
+**다형성** : 하나의 코드가 여러가지의 자료형으로 구현되어 실행되는 것,  유연성, 재활용성, 유지보수성에 기본이 되는 특징
+
+Cmd + shift + O 로 ArrayList import 할 수 있다.
