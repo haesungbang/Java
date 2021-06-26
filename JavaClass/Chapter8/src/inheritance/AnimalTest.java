@@ -40,7 +40,7 @@ public class AnimalTest {
 		AnimalTest test = new AnimalTest();
 		test.moveAnimal(new Human());
 		test.moveAnimal(new Tiger());
-		test.moveAnimal(new Eagle());
+//		test.moveAnimal(new Eagle());
 //		Animal animal = new Human();
 		
 		Animal[] animalList = new Animal[3];
