@@ -169,7 +169,7 @@ Chapter7 Student, Subject, StudentTest ( 보기 )
 
 **상속과 다형성** : 상속을 통해 다형성을 구현할 수 있다.
 
-자바는 single inheritance 만을 지원한다.
+자바는 single inheritance 만을 지원한다. extends 뒤에 하나만 올 수 있다.
 
 class Mamma{}
 class Human extends Mamma{} // 상속 받았다.
@@ -234,3 +234,15 @@ final class 의 경우, 경우 상속이 되지 않는다.
 Computer myCom = new DeskTop();
 이면 type 은 Computer 이고 메서드가 오버라이딩 되어 있으면 DeskTop 메서드가 불린다?
 
+---
+
+**인터페이스 선언과 구현하기**
+
+인터페이스는 추상메서드로 이루어진다.
+인터페이스는 상속할 때,  implements
+인터페이스를 상속받아서 구현하는 것을 타입상속
+다른 것은 구현상속?
+
+인터페이스는 Client Code 와 서비스를 제공하는 객체사이의 약속이다.
+
+인터페이스의 요소: 상수, 추상메서드, 디폴트메서드, 정적메서드, private 메서드
