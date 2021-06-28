@@ -12,4 +12,20 @@ public interface Calc {
 	int substract(int num1, int num2);
 	int times(int num1, int num2);
 	int divide(int num1, int num2);
+	
+	// default 구현코드: 재정의 가능하다.
+	default void description() {
+		System.out.println("계산기를 구현합니다.");
+	}
+	
+	// 인스턴스 생성과 상관없이 사용할 수 있다.
+	static int total(int[] arr) {
+		int total = 0;
+		
+		for(int i: arr) {
+			total += i;
+		}
+		return total;
+		
+	}
 }
