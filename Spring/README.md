@@ -7,3 +7,5 @@ group 회사명 같은 느낌? artifact 는 프로젝트 이름
 요즘 개발에서는 test 가 정말 중요하다.
 
 preference 에서 gradle 을 intelij 로 하면 빨리 실행
+
+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
