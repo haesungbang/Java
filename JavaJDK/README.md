@@ -81,9 +81,10 @@ public class TreeDPrinter<T> {}
 - Collection 관련 메서드
   - add()
   - clear()
-  - remove()
+  - remove() : python 과 달리 index 로 -1 을 못 가진다.
   - size()
-  - iterator()
+  - iterator() : 순회를 할 때 사용한다. set 같은 것은 순회가 없기 때문에 사용
+    Iterator<Member> iterator = arrayList.iterator();
 
 **Map** : 쌍으로 데이터를 관리할 때(Python Dictionary 와 비슷하다.)
 
