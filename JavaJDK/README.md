@@ -87,10 +87,14 @@ public class TreeDPrinter<T> {}
     Iterator<Member> iterator = arrayList.iterator();
 
 **Map** : 쌍으로 데이터를 관리할 때(Python Dictionary 와 비슷하다.)
+Key 가 되는 객체의 유일성함을 알기 위해 equals() 와 hashCode() 재정의해야한다.
 
 - HashTable : 동기화 지원
-- HashMap : 많이 쓴다. 동기화 지원 X
-- TreeMap
+- **HashMap** : 많이 쓴다. map 중에서도 가장 많이 쓴다. 동기화 지원 X
+  넣을 때는 put(), 꺼낼 때는 get()
+- TreeMap: 정렬이 되어있다? Integer 가 Comparable 이 구현되어 있다. 바꾸고 싶으면
+                  Comparator 사용
+                  
 
 프로세스에 올라간 것을 Cpu로 보내는 것을 쓰레드? 여러개면 멀티쓰레드
 lock 을 활용해서, 동기화(synchronized) 를 통해 오류가 안 생기게 한다. 
@@ -128,6 +132,10 @@ remove(-1) 뒤에서 꺼낸다: stack
 검색에 사용하기 좋다.
 중복허용 X
 트리순회 방법: (중위)inorder, (전위)preorder, (후위)postorder
+**TreeSet**: 객체의 정렬에 사용되는 클래스로, 중복을 허용하지 않는 BST로 구현
+비교를 위해서 Comparable, Comparator 를 구현해야한다.
+둘 중 하나만 구현하면 된다.
+Comparable 로 구현하고, 뒤에 다른 것과 비교해서 하고 싶을 때 Comparator 를 사용??
 
 **Hashing** : 검색을 위한 자료구조
 hashtable, key, hash function 으로 구성.
