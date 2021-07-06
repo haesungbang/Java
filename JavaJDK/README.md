@@ -143,7 +143,7 @@ JVM 이 인스턴스를 관리하는 방식이 hashing 방식
 index = h(key)
 O(1)
 
-
+복습완료
 
 
 
