@@ -1,14 +1,17 @@
 Spring Start
 
-start.spring.io 스프링 부트
+start.spring.io 스프링 부트에서 프로젝트를 만든다.
 요즘은 Gradle 사용
 group 회사명 같은 느낌? artifact 는 프로젝트 이름
+Spring web, themeleaf 선택하고 generate
 
 요즘 개발에서는 test 가 정말 중요하다.
 
 preference 에서 gradle 을 intelij 로 하면 빨리 실행
 
 thymeleaf 는 템플릿 엔진.
+
+실행은 어플리케이션 들어가서 main 을 실행
 
 ---
 
@@ -34,5 +37,6 @@ thymeleaf 템플릿 엔진을 사용해서 동적으로 바꿀 수 있다
 3. api
    객체를 내리면 JsonConverter 를 통해서 Json 으로 보낸다
    String 이면 StringConverter 를 통해서 String 반환
+   @ResponseBody 하면 html 이 아니라 그냥 글자를 내보낸다.
 
 > Tip: getter setter 은 Cmd+N
