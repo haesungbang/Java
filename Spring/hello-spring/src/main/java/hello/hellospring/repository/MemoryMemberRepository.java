@@ -1,13 +1,17 @@
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
+@Repository
 public class MemoryMemberRepository implements MemberRepository {
 
     // Map HashMap 찾아보기.
+    // 저장소
     private static Map<Long, Member> store = new HashMap<>();
+
     // 숫자 1 씩 늘리기
     private static long sequence = 0L;
 

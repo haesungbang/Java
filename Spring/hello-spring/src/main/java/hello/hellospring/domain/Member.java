@@ -1,9 +1,11 @@
 package hello.hellospring.domain;
 
 public class Member {
+    // 요구사항 ID(시스템에 저장하는 아이디), 이름
     private Long id;
     private String name;
 
+    // getter, setter
     public Long getId() {
         return id;
     }
