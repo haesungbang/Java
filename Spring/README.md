@@ -45,7 +45,7 @@ thymeleaf 템플릿 엔진을 사용해서 동적으로 바꿀 수 있다
 
 회원관리예제(데이터베이스가 정해지지 않았을 때)
 
-java junit 테스트한다.
+java junit에서? 을 활용해서? 테스트한다.
 
 controller 에서 요청을 받고, service 에서 비지니스 로직을 만들고, repository에서 데이터 저장하고
 
@@ -66,3 +66,8 @@ Localhost:8080 으로 가면, controller 를 먼저 뒤지고 없으면, static
 Member Form 을 만든이유, Member 로 받을 경우 무관한 데이터를 추가로 받아야되서 좋지 않다.
 
 왜 redirect 가 안 되나....
+
+---
+
+DB : H2DB 설치, 순수 JDBC, 스프링 JDBC 템플릿, JPA, 스프링 데이터 JPA
+
