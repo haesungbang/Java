@@ -55,3 +55,14 @@ controller 에서 요청을 받고, service 에서 비지니스 로직을 만들
   기본적으로 싱글톤으로 등록한다.(유일하게 하나만 등록해서 공유한다.)
 - 자바 코드로 직접 스프링 빈 등록하기
 
+---
+
+회원관리예제 mvc
+
+Localhost:8080 으로 가면, controller 를 먼저 뒤지고 없으면, static
+
+작성 순서: Controller -> templates
+
+Member Form 을 만든이유, Member 로 받을 경우 무관한 데이터를 추가로 받아야되서 좋지 않다.
+
+왜 redirect 가 안 되나....
